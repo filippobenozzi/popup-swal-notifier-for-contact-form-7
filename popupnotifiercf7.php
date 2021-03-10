@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Popup Notifier for Contact Form 7
- * Plugin URI: filippo.im
+ * Plugin URI: https://github.com/filippobenozzi/popup-swal-notifier-for-contact-form-7
  * Description: Contact Form 7 pop-up notifier using sweetalert2.
  * Version: 1.0
  * Author: Filippo Benozzi
@@ -15,6 +15,3 @@ function popupnotifiercf7_scripts($hook) {
     wp_enqueue_script( 'custom_js', plugins_url( 'js/popupnotifiercf7.js', __FILE__ ), array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'popupnotifiercf7_scripts');
-
-
-?>
