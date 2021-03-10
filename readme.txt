@@ -2,7 +2,7 @@
 Tags: contact form 7, response message, popup message
 Requires at least: 3.8.5
 Tested up to: 5.7.0
-Stable tag: trunk
+Stable tag: 1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
