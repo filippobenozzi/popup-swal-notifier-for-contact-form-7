@@ -7,15 +7,16 @@ License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 Requires PHP: 5.6
 
-This plugin will show confirmation and error messages of CF7 inside a popup made with sweetalert.
+This plugin will show confirmation and error messages of CF7 inside a popup made with sweetalert2.
 
 == Description ==
 
-This plugin will show confirmation and error messages of CF7 inside a popup made with sweetalert.
+This plugin will show confirmation and error messages of CF7 inside a popup made with sweetalert2.
 You need Contact Form 7 installed.
 
-= Features of CFDB 7 =
+= Features of Popup Message Notifier for Contact Form 7 =
 * No configuration is needed
+* You can configure various option from the setting page such as auto-close with custom timeout, close button text.
 
 == Installation ==
 1. Make sure you have Contact Form 7 installed.

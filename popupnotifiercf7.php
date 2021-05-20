@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Popup Notifier for Contact Form 7
  * Plugin URI: https://github.com/filippobenozzi/popup-swal-notifier-for-contact-form-7
- * Description: Contact Form 7 pop-up notifier using sweetalert2.
+ * Description: Contact Form 7 custom pop-up notifier made with sweetalert2.
  * Version: 1.2
  * Author: Filippo Benozzi
  * Author URI: https://filippo.im
