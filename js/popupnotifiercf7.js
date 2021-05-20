@@ -1,44 +1,60 @@
-var isAutoClose = PopUpParamsCF7.popupnotifiercf7_option_isAutoClose ? true : false;
+//
+//	Define variables
+//
+
+var isAutoClose = PopUpParamsCF7.popupnotifiercf7_option_isAutoClose == 1 ? true : false;
+var isConfirmButton = PopUpParamsCF7.popupnotifiercf7_option_isConfirmButton == 1 ? true : false;
+var isShowIcon = PopUpParamsCF7.popupnotifiercf7_option_isShowIcon == 1 ? true : false;
 var customSeconds = PopUpParamsCF7.popupnotifiercf7_option_customSeconds ? PopUpParamsCF7.popupnotifiercf7_option_customSeconds : 2500;
+customSeconds = isAutoClose ? customSeconds : undefined;
 var customTextButton = PopUpParamsCF7.popupnotifiercf7_option_customTextButton ? PopUpParamsCF7.popupnotifiercf7_option_customTextButton : 'Close';
+var customTextButtonBackground = PopUpParamsCF7.popupnotifiercf7_option_customTextButtonBackground;
+
+//
+//	Sweetalert
+//
 
 document.addEventListener( 'wpcf7mailsent', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
-	  icon: 'success',
-	  showConfirmButton: isAutoClose,
+	  icon: isShowIcon ? 'success' : undefined,
+	  showConfirmButton: isConfirmButton,
 	  timer: customSeconds,
 	  confirmButtonText: customTextButton,
+	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
 
 document.addEventListener( 'wpcf7invalid', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
-	  icon: 'error',
-	  showConfirmButton: isAutoClose,
+	  icon: isShowIcon ? 'error' : undefined,
+	  showConfirmButton: isConfirmButton,
 	  timer: customSeconds,
 	  confirmButtonText: customTextButton,
+	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
 
 document.addEventListener( 'wpcf7spam', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
-	  icon: 'warning',
-	  showConfirmButton: isAutoClose,
+	  icon: isShowIcon ? 'warning' : undefined,
+	  showConfirmButton: isConfirmButton,
 	  timer: customSeconds,
 	  confirmButtonText: customTextButton,
+	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
 
 document.addEventListener( 'wpcf7mailfailed', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
-	  icon: 'warning',
-	  showConfirmButton: isAutoClose,
+	  icon: isShowIcon ? 'warning' : undefined,
+	  showConfirmButton: isConfirmButton,
 	  timer: customSeconds,
 	  confirmButtonText: customTextButton,
+	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
 
