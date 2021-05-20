@@ -21,7 +21,7 @@ This plugin will show the messages of CF7 inside a popup made with sweetalert.
 
 == Changelog ==
 = 1.1 =
-* sweetalert2 now is grab from the CDN
+* sweetalert2 updated from CDN
 * update compatibility version
 = 1.0 =
 * Release
