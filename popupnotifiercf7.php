@@ -11,7 +11,7 @@
  */
 
 function popupnotifiercf7_scripts($hook) {
-    wp_enqueue_script( 'swal_js', 'https://cdn.jsdelivr.net/npm/sweetalert2@11', array(), '11.0', true);
+    wp_enqueue_script( 'swal_js', plugins_url( 'js/sweetalert.min.js', __FILE__ ), array(), '11.0', true);
     wp_enqueue_script( 'custom_js', plugins_url( 'js/popupnotifiercf7.js', __FILE__ ), array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'popupnotifiercf7_scripts');
