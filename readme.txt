@@ -1,7 +1,7 @@
 === Popup Message Notifier for Contact Form 7 ===
 Tags: contact form 7, response message, popup message, popup confirmation, popup send, cf7, contact form 7, contact form seven, contact form popup, popup, popup contact form 7
 Requires at least: 3.8.5
-Tested up to: 5.7.0
+Tested up to: 5.7
 Stable tag: 1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
