@@ -11,9 +11,10 @@
  */
 
 //
-//  Set default parameters on activation
+//  Set default parameters on activation and after update
 //
 register_activation_hook( __FILE__, 'popupnotifiercf7_on_activation' );
+do_action( 'upgrader_process_complete', 'popupnotifiercf7_on_activation');
 function popupnotifiercf7_on_activation() {
     if ( get_option( 'popupnotifiercf7_option_isAutoClose' ) === false ){
         update_option( 'popupnotifiercf7_option_isAutoClose', '1' );
@@ -38,8 +39,8 @@ function popupnotifiercf7_on_activation() {
 //
 //  Remove parameters on deactivation
 //
-register_deactivation_hook( __FILE__, 'popupnotifiercf7_on_deactivation' );
-function popupnotifiercf7_on_deactivation() {
+register_uninstall_hook( __FILE__, 'popupnotifiercf7_on_deactivation' );
+function popupnotifiercf7_on_uninstall() {
     if ( get_option( 'popupnotifiercf7_option_isAutoClose' ) != false ){
         delete_option('popupnotifiercf7_option_isAutoClose');
     }
