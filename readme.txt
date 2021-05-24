@@ -24,6 +24,8 @@ You need Contact Form 7 installed.
 3. Done! Just remember to keep the plugins up to date!
 
 == Changelog ==
+= 1.2.6 =
+* bugfix - after update set parameters if not exists
 = 1.2.5 =
 * bugfix - default parameters are now set on activation and deinitialize on deactivation
 = 1.2 =
