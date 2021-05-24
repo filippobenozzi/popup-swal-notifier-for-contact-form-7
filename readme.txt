@@ -2,7 +2,7 @@
 Tags: contact form 7, response message, popup message, popup confirmation, popup send, cf7, contact form 7, contact form seven, contact form popup, popup, popup contact form 7
 Requires at least: 3.8.5
 Tested up to: 5.7
-Stable tag: 1.2
+Stable tag: 1.2.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 Requires PHP: 5.6
@@ -24,6 +24,8 @@ You need Contact Form 7 installed.
 3. Done! Just remember to keep the plugins up to date!
 
 == Changelog ==
+= 1.2.5 =
+* bugfix - default parameters are now set on activation and deinitialize on deactivation
 = 1.2 =
 * added setting page under Settings > CF7 Popup Settings
 = 1.1 =
