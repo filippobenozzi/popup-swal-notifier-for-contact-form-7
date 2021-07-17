@@ -1,12 +1,10 @@
-<?php function popupnotifiercf7_options_page() { ?>
-
-  <div class="wrap">
+<div class="wrap">
     <h1>Popup Message Notifier for Contact Form 7 - Settings</h1>
     <form method="post" action="options.php">
 
         <?php settings_fields( 'popupnotifiercf7_options_group' ); ?>
 
-        <p>Custom options for CF7 pop-up.<br /><b>NB.</b> Remember these option will affect confirm, warning and error alerts.</p>
+        <p>Custom options for CF7 pop-up.<br /><b>NB.</b> Remember these option will affect confirms, warnings and errors alerts.</p>
 
         <table class="form-table">
             <tbody>
@@ -77,5 +75,3 @@
         <?php  submit_button(); ?>
     </form>
   </div>
-
-<?php } ?>

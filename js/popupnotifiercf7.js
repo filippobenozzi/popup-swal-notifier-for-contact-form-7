@@ -1,7 +1,6 @@
 //
 //	Define variables
 //
-
 var isAutoClose = PopUpParamsCF7.popupnotifiercf7_option_isAutoClose == 1 ? true : false;
 var isConfirmButton = PopUpParamsCF7.popupnotifiercf7_option_isConfirmButton == 1 ? true : false;
 var isShowIcon = PopUpParamsCF7.popupnotifiercf7_option_isShowIcon == 1 ? true : false;
@@ -9,11 +8,9 @@ var customSeconds = PopUpParamsCF7.popupnotifiercf7_option_customSeconds ? PopUp
 customSeconds = isAutoClose ? customSeconds : undefined;
 var customTextButton = PopUpParamsCF7.popupnotifiercf7_option_customTextButton ? PopUpParamsCF7.popupnotifiercf7_option_customTextButton : 'Close';
 var customTextButtonBackground = PopUpParamsCF7.popupnotifiercf7_option_customTextButtonBackground;
-
 //
 //	Sweetalert
 //
-
 document.addEventListener( 'wpcf7mailsent', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
@@ -24,7 +21,6 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
-
 document.addEventListener( 'wpcf7invalid', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
@@ -35,7 +31,6 @@ document.addEventListener( 'wpcf7invalid', function( event ) {
 	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
-
 document.addEventListener( 'wpcf7spam', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
@@ -46,7 +41,6 @@ document.addEventListener( 'wpcf7spam', function( event ) {
 	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
-
 document.addEventListener( 'wpcf7mailfailed', function( event ) {
 	Swal.fire({
 	  title: event.detail.apiResponse.message,
@@ -57,7 +51,6 @@ document.addEventListener( 'wpcf7mailfailed', function( event ) {
 	  confirmButtonColor: customTextButtonBackground,
 	})
 }, false );
-
 document.addEventListener( 'wpcf7submit', function( event ) {
 	var divsToHide = document.getElementsByClassName("wpcf7-response-output");
 	for(var i = 0; i < divsToHide.length; i++){
@@ -65,4 +58,3 @@ document.addEventListener( 'wpcf7submit', function( event ) {
 	    divsToHide[i].style.display = "none";
 	}
 }, false );
-
