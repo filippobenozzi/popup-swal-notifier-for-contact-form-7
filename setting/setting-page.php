@@ -47,6 +47,37 @@
                         <input type="number" name="popupnotifiercf7_option_customSeconds" value="<?= ($popupnotifiercf7_option_customSeconds) ? $popupnotifiercf7_option_customSeconds : '2500' ?>" />
                     </td>
                 </tr>
+
+                <tr>
+                    <th scope="row">Popup background color</th>
+                    <td>
+                        <?php
+                            $popupnotifiercf7_option_backgroundPopupColor = get_option('popupnotifiercf7_option_backgroundPopupColor');
+                        ?>
+                        <input type="text" name="popupnotifiercf7_option_backgroundPopupColor" value="<?= ($popupnotifiercf7_option_backgroundPopupColor) ? $popupnotifiercf7_option_backgroundPopupColor : '#ffffff' ?>" />
+                        <script>
+                            jQuery(document).ready(function($){
+                                jQuery('[name="popupnotifiercf7_option_backgroundPopupColor"]').wpColorPicker();
+                            });
+                        </script>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Text color</th>
+                    <td>
+                        <?php
+                            $popupnotifiercf7_option_messageTextColor = get_option('popupnotifiercf7_option_messageTextColor');
+                        ?>
+                        <input type="text" name="popupnotifiercf7_option_messageTextColor" value="<?= ($popupnotifiercf7_option_messageTextColor) ? $popupnotifiercf7_option_messageTextColor : '#000000' ?>" />
+                        <script>
+                            jQuery(document).ready(function($){
+                                jQuery('[name="popupnotifiercf7_option_messageTextColor"]').wpColorPicker();
+                            });
+                        </script>
+                    </td>
+                </tr>
+
                 <tr>
                     <th scope="row">Close popup button text</th>
                     <td>
@@ -56,6 +87,7 @@
                         <input type="text" maxlength="100" name="popupnotifiercf7_option_customTextButton" value="<?= ($popupnotifiercf7_option_customTextButton) ? $popupnotifiercf7_option_customTextButton : 'Close' ?>" />
                     </td>
                 </tr>
+
                 <tr>
                     <th scope="row">Close popup button background color</th>
                     <td>
@@ -70,6 +102,7 @@
                         </script>
                     </td>
                 </tr>
+
             </tbody>
         </table>
         <?php  submit_button(); ?>

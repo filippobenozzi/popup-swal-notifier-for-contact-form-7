@@ -18,6 +18,8 @@ function popupnotifiercf7_register_settings() {
     register_setting( 'popupnotifiercf7_options_group', 'popupnotifiercf7_option_customSeconds', 'popupnotifiercf7_callback' );
     register_setting( 'popupnotifiercf7_options_group', 'popupnotifiercf7_option_customTextButton', 'popupnotifiercf7_callback' );
     register_setting( 'popupnotifiercf7_options_group', 'popupnotifiercf7_option_customTextButtonBackground', 'popupnotifiercf7_callback' );
+    register_setting( 'popupnotifiercf7_options_group', 'popupnotifiercf7_option_backgroundPopupColor', 'popupnotifiercf7_callback' );
+    register_setting( 'popupnotifiercf7_options_group', 'popupnotifiercf7_option_messageTextColor', 'popupnotifiercf7_callback' );
 }
 add_action( 'admin_init', 'popupnotifiercf7_register_settings' );
 register_activation_hook( __FILE__, 'popupnotifiercf7_on_activation' );
@@ -39,6 +41,12 @@ function popupnotifiercf7_on_activation() {
     }
     if ( get_option( 'popupnotifiercf7_option_customTextButtonBackground' ) === false ){
         update_option( 'popupnotifiercf7_option_customTextButtonBackground', '#000000' );
+    }
+    if ( get_option( 'popupnotifiercf7_option_messageTextColor' ) === false ){
+        update_option( 'popupnotifiercf7_option_messageTextColor', '#000000' );
+    }
+    if ( get_option( 'popupnotifiercf7_option_backgroundPopupColor' ) === false ){
+        update_option( 'popupnotifiercf7_option_backgroundPopupColor', '#ffffff' );
     }
 }
 add_action( 'upgrader_process_complete', 'popupnotifiercf7_on_activation');
@@ -65,6 +73,12 @@ function popupnotifiercf7_on_uninstall() {
     if ( get_option( 'popupnotifiercf7_option_customTextButtonBackground' ) != false ){
         delete_option('popupnotifiercf7_option_customTextButtonBackground');
     }
+    if ( get_option( 'popupnotifiercf7_option_backgroundPopupColor' ) != false ){
+        delete_option('popupnotifiercf7_option_backgroundPopupColor');
+    }
+    if ( get_option( 'popupnotifiercf7_option_messageTextColor' ) != false ){
+        delete_option('popupnotifiercf7_option_messageTextColor');
+    }
 }
 //
 //  Enqueue scripts
@@ -82,6 +96,8 @@ function popupnotifiercf7_scripts($hook) {
         'popupnotifiercf7_option_customSeconds' => (int)get_option('popupnotifiercf7_option_customSeconds'),
         'popupnotifiercf7_option_customTextButton' => get_option('popupnotifiercf7_option_customTextButton'),
         'popupnotifiercf7_option_customTextButtonBackground' => get_option('popupnotifiercf7_option_customTextButtonBackground'),
+        'popupnotifiercf7_option_backgroundPopupColor' => get_option('popupnotifiercf7_option_backgroundPopupColor'),
+        'popupnotifiercf7_option_messageTextColor' => get_option('popupnotifiercf7_option_messageTextColor'),
       );
     wp_localize_script( 'popupnotifiercf7_custom_js', 'PopUpParamsCF7', $params);
 }
